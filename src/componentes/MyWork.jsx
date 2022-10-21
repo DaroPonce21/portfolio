@@ -2,6 +2,7 @@ import { Card, CardContent, CardMedia, Grid, Link, makeStyles, Typography } from
 import React from 'react'
 import ReactPlayer from 'react-player'
 import mockData from '../mockData.js'
+import './player.css'
 
 const MyWork = ({ title, dark, id }) => {
     const classes = useStyles()
@@ -26,15 +27,18 @@ const MyWork = ({ title, dark, id }) => {
                                                 </Link>
                                             </>
                                             :
-                                            <ReactPlayer
-                                                target='_blank'
-                                                rel='noopener noreferrer'
-                                                url={link}
-                                                controls
-                                                loop
-                                                width='100%'
-                                                height="18vw"
-                                            />
+                                            <div className='player-wrapper'>
+                                                    <ReactPlayer
+                                                    className='react-player'
+                                                    target='_blank'
+                                                    rel='noopener noreferrer'
+                                                    url={link}
+                                                    controls
+                                                    loop
+                                                    width="100%"
+                                                    height="100%"
+                                                    />
+                                                    </div>
                                         }
                                         <CardContent>
                                             <Link href={deploy} className={classes.title} target='_blank' rel='noopener noreferrer'>
@@ -85,6 +89,13 @@ const useStyles = makeStyles((theme) => ({
     },
     caratula: {
         height: '18vw',
+    },
+    video: {
+        display: "contents",
+        width: '10vw',
+        height: "18vw",
+        border: "solid 8px red"
+
     },
 }))
 
