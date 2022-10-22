@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from "@material-ui/core";
 import TypeWriterEffect from 'react-typewriter-effect'
-import yo from '../image/yo2.jpeg'
+import yo from '../image/yo1.jpg'
 import pdf from '../image/DarioPonceFullStackWebCV.pdf'
 
 
@@ -54,7 +54,7 @@ const About = ({ title, dark, id }) => {
                     <CardActions>
                         <Button variant='contained' className={classes.pdfbutton}>
                             <a href={pdf} download>
-                                Donwload CV
+                                Download CV
                             </a>
 
                         </Button>

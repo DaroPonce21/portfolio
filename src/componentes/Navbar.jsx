@@ -29,7 +29,7 @@ const links = [
     },
     {
         id: 'contact',
-        text: 'Get in touch',
+        text: 'Contact me',
         icon: <ContactMailTwoToneIcon fontSize='large' />
     },
 ]

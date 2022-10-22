@@ -17,7 +17,7 @@ const Contact = ({ title, dark, id }) => {
                 <Typography variant="h3">{title}</Typography>
                 <Paper className={classes.root}>
                     <div className={classes.titleandchoices}>
-                        <Typography variant="h5">CONTACT ME</Typography>
+                        <Typography variant="h5">More info</Typography>
                         <div className={classes.choices}>
                             <span>Email</span>
                             <Radio
