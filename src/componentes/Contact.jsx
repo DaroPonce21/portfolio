@@ -55,7 +55,7 @@ const Contact = ({ title, dark, id }) => {
                             <form className={classes.form} action="https://formsubmit.co/55590b0b4251a5bcc2e5af51ed9989a1 " method="POST">
                                 <input type="text" name="name" required placeholder='Your name' />
                                 <input type="email" name="email" required placeholder='email@email.com' />
-                                <textarea type='textarea' name='message' rows="10" required placeholder='your mensseger' />
+                                <textarea type='textarea' name='message' rows="10" required placeholder='your message' />
                                 <button type="submit">Send</button>
                             </form>
                     }
