@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card, CardActions, CardContent, CardMedia, makeStyles, Typography } from "@material-ui/core";
 import TypeWriterEffect from 'react-typewriter-effect'
 import yo from '../image/yo1.jpg'
-import pdf from '../image/DarioPonceFullStackWebCV.pdf'
+import pdf from '../image/Dario_Ponce_FullStack_Web.pdf'
 
 
 const About = ({ title, dark, id }) => {
