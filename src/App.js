@@ -8,7 +8,8 @@ import Skills from "./componentes/Skills";
 const theme = createMuiTheme({
   palette: {
     primary: { main: "#F1DCC9"},
-    secondary: { main: "#9F4636" }
+    secondary: { main: "#9F4636" },
+    tertiary: {main: "#F1DCC9"}
 
   }
 })
@@ -20,7 +21,7 @@ function App() {
       <div className={classes.root}>
         <Navbar />
         <About title='About Me' id='about' dark={true} />
-        <Skills title='My Coding Journey' id='skills' dark={false} />
+        <Skills title='My Technologies Used' id='skills' dark={false} />
         <MyWork title='My Work' id='work' dark={true} />
         <Contact title='Contact Me' id='contact' dark={false} />
       </div>

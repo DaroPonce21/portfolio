@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth: "80vw",
         margin: "0 auto",
         marginTop:theme.spacing(3),
+        
         "& h4":{
             marginBotton:theme.spacing(6)
         }
