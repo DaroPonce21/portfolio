@@ -1,8 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import dbPro from "../assets/dbProy";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
 
 const Details = () => {
   const { projectId } = useParams();
@@ -15,6 +13,12 @@ const Details = () => {
   const { title, data, tecno, desc, linkVideo, linkGitH, web, portada, img } =
     project;
 
+  const [portImage, setPortImage] = useState(portada);
+
+  const handleImageClick = (e) => {
+    setPortImage(e);
+  };
+
   return (
     <div className="details-container">
       <h1>{title}</h1>
@@ -23,15 +27,17 @@ const Details = () => {
         <h4>{tecno}</h4>
       </div>
       <p>{desc}</p>
-      <img src={portada} alt="imagen" />
+      <img className="portada" src={portImage} alt="imagen" />
 
-      <Slider className="image-carousel" autoplay={true} autoplaySpeed={4000}>
-        {img.map((imagen, index) => (
-          <div key={index}>
-            <img src={imagen} alt={`Imagen ${index}`} />
-          </div>
-        ))}
-      </Slider>
+      <div className="mini-img">
+        <div className="imagen-flex">
+          {img.map((imagen, index) => (
+            <div key={index} onClick={() => handleImageClick(imagen)}>
+              <img src={imagen} alt={`Imagen ${index}`} />
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="details-links">
         <div className={linkVideo ? "item-link" : "hidden"}>
@@ -51,12 +57,12 @@ const Details = () => {
         </div>
 
         <div className="item-link">
-                        <div className="link-detail">
-                          <Link className="details" to={'/works'}>
-                            Volver atras
-                          </Link>
-                        </div>
-                      </div>
+          <div className="link-detail">
+            <Link className="details" to={"/works"}>
+              Volver atras
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -12,6 +12,10 @@
   color: #000;
 }
 
+h4 {
+  display: contents;
+}
+
 img {
   object-fit: cover;
   object-position: top;
@@ -464,11 +468,12 @@ footer h2 {
   font-size: 16px;
 }
 
-.details-container img {
-  width: 80%;
-  height: 80%;
+.portada {
+  width: 50%;
+  height: 50%;
   border-radius: 20px;
   margin-top: 20px;
+  
 }
 
 .details-container .item-link {
@@ -486,18 +491,24 @@ footer h2 {
   font-weight: bold;
 }
 
-.image-carousel {
-  width: 80%;
-  height: 80%;
-  overflow: hidden;
-  position: relative;
+.mini-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-
-.image-carousel img {
-  max-width: 100%;
-  max-height: 100%;
+.imagen-flex {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 50px;
 }
-
+.imagen-flex img {
+  height: 100%;
+  width: 100%;
+  overflow:auto;
+  cursor: pointer;
+}
 .containerabout {
   padding: 30px;
   background-color: #dbedf2;
@@ -685,7 +696,7 @@ footer h2 {
   }
 
   .recent .posts .post-item {
-    max-width: 100%; 
+    max-width: 100%;
   }
 
   .recent .posts .post-item h3,

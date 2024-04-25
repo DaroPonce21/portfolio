@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import dbPro from "../assets/dbProy";
 import dbWork from "../assets/dbWork";
+import { useEffect } from "react";
 
 const Proyects = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       {dbWork.length > 0 && (
@@ -32,15 +37,32 @@ const Proyects = () => {
           <h1 className="page-title">Proyectos</h1>
           {dbPro.map(
             (
-              { id, title, data, tecno, desc, linkVideo, linkGitH, web, portada },
+              {
+                id,
+                title,
+                data,
+                tecno,
+                desc,
+                linkVideo,
+                linkGitH,
+                web,
+                portada,
+              },
               index
             ) => (
               <div className="content" key={index}>
                 <div className="works-list">
                   <div className="item">
-                    <img src={portada} alt="imagen" />
+                    <Link to={"/detail/" + id}>
+                      <img src={portada} alt="imagen" />
+                    </Link>
                     <div className="details">
-                      <h3>{title}</h3>
+                      <Link
+                        style={{ textDecoration: "none", color: "black" }}
+                        to={"/detail/" + id}
+                      >
+                        <h3>{title}</h3>
+                      </Link>
                       <div className="item-info">
                         <div className="year-badge">{data}</div>
                         <h4>{tecno}</h4>
@@ -64,7 +86,7 @@ const Proyects = () => {
                       </div>
                       <div className="item-link">
                         <div className="link-detail">
-                          <Link className="details" to={'/detail/' + id}>
+                          <Link className="details" to={"/detail/" + id}>
                             Ver mas
                           </Link>
                         </div>
@@ -82,30 +104,3 @@ const Proyects = () => {
 };
 
 export default Proyects;
-
-{
-  /*
-      <h1 className="page-title">Este es mi PROYECTO O TRABAJO destacado</h1>
-
-      <div className="content">
-        <div className="work-info">
-          <div className="year-badge">Año</div>
-          <div className="category">
-            <p>Tecnologias usadas</p>
-          </div>
-        </div>
-
-        <p>Descripcion</p>
-
-        <img src="Imagen principal" alt="Imagen principal" />
-
-        <h1>NOmbre del proyecto/trabajo</h1>
-        <h2>Tipo de proyecto (ecomer)</h2>
-        <h3>URL O LINKS</h3>
-
-        <p>descripcion</p>
-
-        <img src="assets/single-post-2.png" alt="carrete" />
-      </div>
-  */
-}
