@@ -63,6 +63,16 @@ nav .nav-links .link.selected {
   color: #303f9f;
 }
 
+.home_link {
+  text-decoration: none;
+  color: #303f9f;
+  font-weight: 900;
+}
+.home_link:hover {
+  transition: color 0.3s ease;
+  color: #028f23;
+}
+
 .main {
   padding: 0 148px;
   display: flex;
@@ -473,7 +483,6 @@ footer h2 {
   height: 50%;
   border-radius: 20px;
   margin-top: 20px;
-  
 }
 
 .details-container .item-link {
@@ -506,7 +515,7 @@ footer h2 {
 .imagen-flex img {
   height: 100%;
   width: 100%;
-  overflow:auto;
+  overflow: auto;
   cursor: pointer;
 }
 .containerabout {
