@@ -603,11 +603,11 @@ footer h2 {
   color: #303f9f;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
   nav {
     padding: 20px 40px;
   }
-
+/*
   .main {
     padding: 0 40px;
   }
@@ -616,7 +616,29 @@ footer h2 {
     width: 340px;
     height: 340px;
   }
+*/
 
+.main {
+  padding: 0 20px;
+}
+
+.main img {
+  width: 300px;
+  height: 300px;
+}
+
+.main .info h1 {
+  font-size: 34px;
+}
+
+.main .info p {
+  font-size: 15px;
+}
+
+.main .info button {
+  font-size: 15px;
+  padding: 8px 22px;
+}
   .recent {
     padding: 40px;
   }
@@ -673,7 +695,7 @@ footer h2 {
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1025px) {
   nav {
     padding: 20px;
   }
@@ -802,7 +824,7 @@ footer h2 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   nav {
     justify-content: center;
   }
