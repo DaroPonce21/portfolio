@@ -1,10 +1,9 @@
 import foto from "../assets/yo.jpg";
 import canin from "../assets/imgProyectos/canin/1.png";
 import { Link } from "react-router-dom";
-import pdf from '../assets/CV_DARIO_PONCE_PROGRAMADOR_WEB.pdf'
+import pdf from "../assets/CV_DARIO_PONCE_PROGRAMADOR_WEB.pdf";
 
 const Home = () => {
-
   return (
     <div>
       <div className="main">
@@ -14,13 +13,61 @@ const Home = () => {
             Full Stack Web Developer
           </h1>
           <p>
-            Soy de Argentina, Buenos Aires.
-            <br /> Me gradue como Programador Web Full Stack en el Bootcamp
-            Henry. <br />
-            Complete 2 de 3 años de una tecnicatura en analista de sistemas,{" "}
-            <br />y sigo aprendiendo todos los dias un poco mas!
+            Me alegra que hayas venido, en la pestaña{" "}
+            <Link className="home_link" to="/aboutme">
+              Sobre mi
+            </Link>{" "}
+            encotraras mas detalles sobre mi vida a lo largo de los años, y en{" "}
+            <Link className="home_link" to="/skills">
+              Habilidades y experiencia
+            </Link>{" "}
+            mis estudios y trabajos previos. Pero te dare un resumen ahora.{" "}
             <br />
-            Te cuento las tecnologias que domino:
+            <br />
+            Trabaje 10 años en el area comercial, 6 como{" "}
+            <strong> jefe de deposito </strong> y 4 como{" "}
+            <strong>vendedor </strong>. A lo largo de los años como jefe de
+            deposito, adquirí una sólida experiencia en la gestión de
+            inventarios, la coordinación de equipos y la implementación de
+            procesos eficientes. Este rol me permitió desarrollar una{" "}
+            <strong>capacidad analítica y de resolución de problemas</strong>{" "}
+            que considero fundamental en la programación. Además, la{" "}
+            <strong>atención al detalle</strong> y la precisión que requiere el
+            control de mercancías y remitos es directamente aplicable a la
+            escritura de código limpio y bien documentado.
+            <br />
+            <br />
+            En mi rol como <strong>Vendedor</strong>, perfeccioné mis
+            habilidades de <strong>comunicación y trabajo en equipo</strong>,
+            esenciales para colaborar con otros desarrolladores y departamentos
+            dentro de un entorno de desarrollo ágil. Mi experiencia en ventas
+            también me ayudó a entender las necesidades del cliente y a
+            desarrollar soluciones que se alineen con sus expectativas, una
+            habilidad crucial en el desarrollo de aplicaciones web orientadas al
+            usuario.
+            <br />
+            <br />
+            Actualmente, como <strong>Auditor Médico</strong>, mi trabajo
+            implica revisar detalladamente las historias clínicas, gestionar
+            autorizaciones y coordinar con diversas partes interesadas. Este rol
+            ha reforzado mi capacidad para{" "}
+            <strong>manejar grandes volúmenes de datos con precisión</strong> y
+            garantizar la <strong>integridad de la información</strong>,
+            competencias que son altamente valoradas en el desarrollo de
+            software.
+            <br />
+            <br />
+            He estado perfeccionando mis habilidades técnicas en{" "}
+            <strong>React y Node.js</strong> a través de proyectos personales y
+            cursos en línea, bootcamps y pasantias y estoy entusiasmado por la
+            oportunidad de aplicar estos conocimientos en un entorno
+            profesional. Mi capacidad para{" "}
+            <strong>
+              aprender rápidamente y adaptarme a nuevas tecnologías
+            </strong>{" "}
+            me ha permitido adquirir una base sólida en estas herramientas y
+            frameworks.
+            <br />
             <br />
             <br />
             <strong>Web:</strong> JavaScript, HTML, CSS <br />
@@ -30,9 +77,23 @@ const Home = () => {
             <strong>Base de Datos:</strong> PostgreSQL, Sequalize <br />
             <strong>Metodologias:</strong> Scrum, GitFlow, Slack
           </p>
-          <button className="buttonPDF"><a href={pdf} download className="pdf">Descargar CV</a> </button>
+          <button className="buttonPDF">
+            <a href={pdf} download className="pdf">
+              Descargar CV
+            </a>{" "}
+          </button>
+          <br />
+          <br />
+          <p>
+            <strong>Contactos:</strong>
+            <br />
+            <strong>Mail: </strong> daroponce21@gmail.com <br />
+            <strong>WhatsApp: </strong> 1163710048
+            <br />
+            <strong>Linkedin:</strong> https://www.linkedin.com/in/dario-ponce/
+          </p>
         </div>
-        <img src={foto} />
+        <img src={foto} alt="yo" />
       </div>
 
       <div className="recent">
