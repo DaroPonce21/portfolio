@@ -30,6 +30,9 @@ nav {
   justify-content: space-between;
   font-weight: 600;
 }
+nav a {
+  text-decoration: none;
+}
 
 nav .logo {
   display: flex;
@@ -607,7 +610,7 @@ footer h2 {
   nav {
     padding: 20px 40px;
   }
-/*
+  /*
   .main {
     padding: 0 40px;
   }
@@ -618,27 +621,27 @@ footer h2 {
   }
 */
 
-.main {
-  padding: 0 20px;
-}
+  .main {
+    padding: 0 20px;
+  }
 
-.main img {
-  width: 300px;
-  height: 300px;
-}
+  .main img {
+    width: 300px;
+    height: 300px;
+  }
 
-.main .info h1 {
-  font-size: 34px;
-}
+  .main .info h1 {
+    font-size: 34px;
+  }
 
-.main .info p {
-  font-size: 15px;
-}
+  .main .info p {
+    font-size: 15px;
+  }
 
-.main .info button {
-  font-size: 15px;
-  padding: 8px 22px;
-}
+  .main .info button {
+    font-size: 15px;
+    padding: 8px 22px;
+  }
   .recent {
     padding: 40px;
   }

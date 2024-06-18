@@ -1,5 +1,5 @@
 import foto from "../assets/yo.jpg";
-import canin from "../assets/imgProyectos/canin/1.png";
+import ropa from "../assets/imgProyectos/ecom-ropa/1.png";
 import { Link } from "react-router-dom";
 import pdf from "../assets/CV_DARIO_PONCE_PROGRAMADOR_WEB.pdf";
 
@@ -354,25 +354,17 @@ const Home = () => {
 
       <div className="featured">
         <div className="item">
-          <img src={canin} />
+          <img src={ropa} />
           <div className="details">
-            <h3>Canin-Pedia</h3>
+            <h3>E-commerce Ropa</h3>
             <div className="item-info">
-              <div className="year-badge">2022</div>
+              <div className="year-badge">2024</div>
               <h4>
-                JavaScript | React | Redux | Node | Express | Sequalize |
-                PostgreSQL
+              Javascript | CSS | React | Node | Express  | Mongoose
               </h4>
             </div>
             <p>
-              Consiste en una SPA, que brinda informacion sobre distintas razas
-              de perros. La misma esta hecha consumiendo una API trabajando en
-              el backend con peticiones asincronicas, usando Axios, con Node y
-              Express. En la misma tambien se pueden crear las razas de perro
-              que desee, estas se guardaran en una base de datos de Postgres que
-              esta gestionada con Sequalize. Del lado del front, se utilizo CSS
-              puro, tambien React, se usaron Hooks y Redux, fue el primero
-              proyecto con todas las tecnologias en uso.
+            Es un proyecto de tienda on line para un comercio de vestimenta. El administrador puede cargar nuevos productos, modificar y ocultar anteriores. El usuario se registra mediante auth0, puede ver una pantalla inicial amigable y colorida, entrar en la descripcion de los productos que es muy similar a la de la mayoria de las tiendas online de ropa, agregar productos al carrito y comprarlos. es 100% responsiva para monitores, tablets y smartphones hasta 500px
             </p>
           </div>
         </div>
