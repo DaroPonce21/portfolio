@@ -1,0 +1,320 @@
+.projects {
+  padding: 100px 0;
+
+  background-color: var(--color-surface);
+}
+
+.projects__header {
+  max-width: 680px;
+
+  margin-bottom: 72px;
+}
+
+.projects__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projects__header h2 {
+  margin: 0 0 16px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+
+  letter-spacing: -0.03em;
+}
+
+.projects__header p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.projects__list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 110px;
+}
+
+/* Proyecto */
+
+.project {
+  display: grid;
+
+  grid-template-columns: minmax(0, 7fr) minmax(300px, 5fr);
+
+  align-items: center;
+
+  gap: 56px;
+}
+
+/*
+  En los proyectos invertidos también invertimos
+  el tamaño de las columnas.
+
+  Normal:
+  imagen 7fr | texto 5fr
+
+  Reverse:
+  texto 5fr | imagen 7fr
+*/
+
+.project--reverse {
+  grid-template-columns: minmax(300px, 5fr) minmax(0, 7fr);
+}
+
+.project--reverse .project__visual {
+  order: 2;
+}
+
+.project--reverse .project__info {
+  order: 1;
+}
+
+/* Mockup del navegador */
+
+.project__browser {
+  overflow: hidden;
+
+  padding: 10px;
+
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  box-shadow: 0 18px 45px rgba(11, 28, 48, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project__browser:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 24px 55px rgba(11, 28, 48, 0.12);
+}
+
+.project__browser-bar {
+  position: relative;
+
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+}
+
+.project__browser-dots {
+  display: flex;
+
+  gap: 6px;
+}
+
+.project__browser-dots span {
+  width: 9px;
+  height: 9px;
+
+  background-color: var(--color-border);
+
+  border-radius: 50%;
+}
+
+.project__browser-title {
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: var(--color-text-muted);
+
+  font-family: var(--font-code);
+  font-size: 0.65rem;
+}
+
+.project__image {
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  object-fit: cover;
+  object-position: top;
+
+  border-radius: 12px;
+}
+
+/* Información */
+
+.project__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project__category {
+  margin-bottom: 10px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project__title {
+  margin: 0 0 14px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+
+  letter-spacing: -0.025em;
+}
+
+.project__description {
+  margin: 0 0 24px;
+
+  color: var(--color-text-muted);
+
+  line-height: 1.7;
+}
+
+/* Tecnologías */
+
+.project__technologies {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 0 0 30px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.project__technologies li {
+  padding: 6px 9px;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+}
+
+/* Acciones */
+
+.project__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.project__primary-link,
+.project__secondary-link {
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.project__primary-link {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.project__primary-link:hover {
+  background-color: var(--color-primary-hover);
+
+  transform: translateY(-2px);
+}
+
+.project__secondary-link {
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  border: 1px solid var(--color-border);
+}
+
+.project__secondary-link:hover {
+  background-color: var(--color-primary-soft);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .projects {
+    padding: 80px 0;
+  }
+
+  .projects__list {
+    gap: 80px;
+  }
+
+  .project,
+  .project--reverse {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .project--reverse .project__visual,
+  .project--reverse .project__info {
+    order: initial;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .projects {
+    padding: 64px 0;
+  }
+
+  .projects__header {
+    margin-bottom: 48px;
+  }
+
+  .projects__list {
+    gap: 64px;
+  }
+
+  .project__browser {
+    padding: 7px;
+  }
+
+  .project__browser-title {
+    display: none;
+  }
+}

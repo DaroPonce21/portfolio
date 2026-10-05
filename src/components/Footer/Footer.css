@@ -1,0 +1,36 @@
+.footer {
+  padding: 24px 0;
+
+  color: var(--color-contact-text-subtle);
+  background-color: var(--color-contact-background);
+
+  border-top: 1px solid var(--color-contact-border);
+}
+
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  font-size: 0.75rem;
+}
+
+.footer__content a {
+  color: var(--color-contact-text-muted);
+
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer__content a:hover {
+  color: var(--color-contact-text);
+}
+
+@media (max-width: 600px) {
+  .footer__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

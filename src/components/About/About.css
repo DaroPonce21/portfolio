@@ -1,0 +1,173 @@
+.about {
+  padding: 120px 0;
+
+  background-color: var(--color-surface);
+}
+
+.about__content {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1.1fr) minmax(350px, 0.9fr);
+
+  gap: 120px;
+}
+.about__eyebrow {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-code);
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about__intro h2 {
+  max-width: 620px;
+
+  margin: 0 0 36px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.about__text {
+  max-width: 620px;
+}
+
+.about__text p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about__text p + p {
+  margin-top: 18px;
+}
+.about__timeline {
+  position: relative;
+}
+
+.timeline {
+  position: relative;
+
+  margin-top: 12px;
+  padding-left: 28px;
+
+  border-left: 1px solid var(--color-border);
+}
+.timeline__item {
+  position: relative;
+
+  padding: 0 0 48px 20px;
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+.timeline__item::before {
+  content: "";
+
+  position: absolute;
+
+  left: -34px;
+  top: 6px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: var(--color-primary);
+
+  border: 3px solid var(--color-surface);
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+.timeline__date {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-primary);
+
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+}
+
+.timeline__item h3 {
+  margin: 0 0 4px;
+
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+}
+
+.timeline__company {
+  display: block;
+
+  margin-bottom: 12px;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.timeline__item p {
+  margin: 0;
+
+  color: var(--color-text-muted);
+
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+@media (max-width: 900px) {
+  .about {
+    padding: 90px 0;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+
+    gap: 72px;
+  }
+
+  .about__intro h2,
+  .about__text {
+    max-width: 720px;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    padding: 64px 0;
+  }
+
+  .about__content {
+    gap: 56px;
+  }
+
+  .about__intro h2 {
+    margin-bottom: 28px;
+  }
+
+  .timeline {
+    padding-left: 22px;
+  }
+
+  .timeline__item {
+    padding-left: 16px;
+  }
+
+  .timeline__item::before {
+    left: -28px;
+  }
+}

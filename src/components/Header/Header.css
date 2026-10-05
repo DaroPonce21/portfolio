@@ -1,0 +1,282 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background-color: var(--color-header-background);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(211, 228, 254, 0.6);
+}
+
+.header__content {
+  min-height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+}
+
+.header__brand {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+.header__name {
+  color: var(--color-text);
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header__badge {
+  padding: 4px 8px;
+
+  color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+
+  border-radius: 6px;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Navegación desktop */
+
+.header__nav {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+}
+
+.header__nav a {
+  color: var(--color-text-muted);
+
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.header__nav a:hover {
+  color: var(--color-primary);
+}
+
+/* Acciones desktop */
+
+.header__actions {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.header__cv,
+.header__contact {
+  padding: 10px 16px;
+
+  border-radius: 999px;
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header__cv {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+.header__cv:hover {
+  background-color: var(--color-primary-soft);
+}
+
+.header__contact {
+  color: white;
+  background-color: var(--color-primary);
+}
+
+.header__contact:hover {
+  background-color: var(--color-primary-hover);
+
+  transform: translateY(-1px);
+}
+
+/* Botón hamburguesa */
+
+.header__menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 9px;
+
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+
+  cursor: pointer;
+}
+
+.header__menu-button span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: var(--color-text);
+
+  border-radius: 999px;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.header__menu-button span + span {
+  margin-top: 5px;
+}
+
+/* Hamburguesa → X */
+
+.header__menu-button--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.header__menu-button--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu-button--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/*
+  El menú mobile puede existir en React cuando isMenuOpen === true,
+  pero por defecto no debe mostrarse en desktop.
+*/
+
+.header__mobile-nav {
+  display: none;
+}
+
+.header__theme-toggle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  color: var(--color-text);
+  background-color: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header__theme-toggle:hover {
+  background-color: var(--color-primary-soft);
+  transform: translateY(-1px);
+}
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+/* Tablet / Mobile */
+
+@media (max-width: 900px) {
+  .header__nav,
+  .header__actions {
+    display: none;
+  }
+
+  .header__menu-button {
+    display: block;
+
+    margin-left: auto;
+  }
+
+  .header__mobile-nav {
+    display: block;
+
+    background-color: var(--color-mobile-menu-background);
+
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header__mobile-content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 12px;
+    padding-bottom: 24px;
+  }
+
+  .header__mobile-content a {
+    padding: 14px 0;
+
+    color: var(--color-text);
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  .header__mobile-content a:hover {
+    color: var(--color-primary);
+  }
+
+  .header__mobile-cv {
+    color: var(--color-primary);
+  }
+}
+
+/* Mobile pequeño */
+
+@media (max-width: 600px) {
+  .header__content {
+    min-height: 70px;
+  }
+
+  .header__badge {
+    display: none;
+  }
+}
