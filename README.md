@@ -1,16 +1,44 @@
-# React + Vite
+# Portfolio — Darío Ponce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desarrollado para presentar mis proyectos, experiencia y perfil como Frontend Developer.
 
-Currently, two official plugins are available:
+🌐 **Demo:** https://darioponceweb.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tecnologías
 
-## React Compiler
+- React
+- JavaScript
+- React Router
+- CSS
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Características
 
-## Expanding the ESLint configuration
+- Diseño responsive
+- Modo claro y oscuro con persistencia de preferencia
+- Navegación mediante React Router
+- Case studies de proyectos
+- Integración de enlaces a proyectos y repositorios
+- Descarga de CV
+- Contacto y copia de email al portapapeles
+- Metadatos Open Graph y SEO básico
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Proyectos destacados
+
+### Musicalizarte
+
+Proyecto real en producción para un medio digital de música y cultura.
+
+Frontend desarrollado con React e integrado con una API propia en Node.js y Express que consume y adapta contenido administrado desde Wix.
+
+### DevJobs
+
+MVP de una plataforma de búsqueda de empleos tecnológicos desarrollada con React.
+
+Incluye búsqueda con debounce, filtros combinables, ordenamiento, paginación, sincronización con la URL y persistencia de postulaciones mediante LocalStorage.
+
+## Desarrollo local
+
+```bash
+npm install
+npm run dev
